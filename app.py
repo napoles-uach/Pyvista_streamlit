@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pyvista
 from pyvista import examples
+pyvista.start_xvfb()
 mesh = examples.load_uniform()
 pl = pyvista.Plotter(shape=(1,2))
 _ = pl.add_mesh(mesh, scalars='Spatial Point Data', show_edges=True)
